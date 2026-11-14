@@ -38,12 +38,15 @@ Este proyecto tiene como finalidad poner en práctica los conocimientos adquirid
 | 📊 Estadísticas | Calcula el precio mayor, menor y promedio. |
 | 🔃 Ordenar artículos | Organiza los productos de la lista. |
 
-## 🛒 Productos de ejemplo
+## ✨Imagenes del programa en ejecucion 
 
-- 🕶️ Gafas de sol.
-- 💎 Pulsera Pandora.
-- 🎀 Gorro de satén.
-- 📿 Collar de perlas.
+<img width="427" height="600" alt="img-----" src="https://github.com/user-attachments/assets/e8de0988-f796-4da2-b4b3-06496d46b190" />
+
+<img width="418" height="612" alt="imagen--" src="https://github.com/user-attachments/assets/a6575141-a930-4eda-8ca9-2ae48beed712" />
+
+<img width="400" height="321" alt="imagen 1" src="https://github.com/user-attachments/assets/fb4b9553-5e0a-43ec-818f-447c732a9ca8" />
+
+<img width="427" height="600" alt="img-----" src="https://github.com/user-attachments/assets/782de045-741b-4518-a920-3b676387160e" />
 
 ## 🛠️ Tecnologías utilizadas
 
