@@ -1,4 +1,4 @@
-﻿List<string> store = ["gafas_solares", "pulsera_pandora", "gorro_satin","collar_perlas"];
+﻿List<string> store = ["gafas_solares", "pulsera_pandora", "gorro_satin", "collar_perlas"];
 List<double> precios = [1050, 7500, 100, 680.000];
 
 int Opcion = -100;
@@ -29,7 +29,10 @@ while (Opcion != 0)
         case 1:
             Console.WriteLine("Ingrese el articulo a guardar");
             Articulo = Console.ReadLine();
-            AgregarArticulo(store, Articulo);
+
+            Console.WriteLine("Ingrese el precio del articulo");
+            double precio = Convert.ToDouble(Console.ReadLine());
+            AgregarArticulo(store, precios, Articulo, precio);
             break;
 
         case 2:
@@ -51,7 +54,7 @@ while (Opcion != 0)
             Console.WriteLine("Ingrese el articulo a eliminar");
             Articulo = Console.ReadLine();
 
-            EliminarArticulo(store, Articulo);
+            EliminarArticulo(store, precios, Articulo);
             break;
         case 5:
             VerArticulos(store);
@@ -75,9 +78,12 @@ while (Opcion != 0)
 
     }
 }
-static void AgregarArticulo(List<string> store, string Articulo)
+static void AgregarArticulo(List<string> store, List<double> precios, string Articulo, double precio)
 {
     store.Add(Articulo);
+    precios.Add(precio);
+    Console.WriteLine("Articulo agregado correctamente");
+    Console.ReadKey();
 }
 
 static void BuscarArticulo(List<string> store, string Articulo)
@@ -118,18 +124,24 @@ static void ModificarArticulo(List<string> store, string Articulo, string NuevoA
     }
 }
 
-static void EliminarArticulo(List<string> store, string Articulo)
+static void EliminarArticulo(List<string> store,List<double> precios, string Articulo)
 {
     bool encontrado = false;
+    int i = 0;
 
-    for (int i = 0; i < store.Count; i++)
+    while (i < store.Count)
     {
         if (Articulo == store[i])
         {
             store.RemoveAt(i);
+            precios.RemoveAt(i);
             encontrado = true;
             Console.WriteLine("Articulo eliminado correctamente");
 
+        }
+        else
+        {
+            i++;
         }
     }
 
@@ -147,7 +159,3 @@ static void VerArticulos(List<string> store)
         Console.WriteLine(articulo);
     }
 }
-
-
-
-
