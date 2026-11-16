@@ -4,7 +4,7 @@ List<double> precios = [1050, 7500, 100, 680.000];
 int Opcion = -100;
 string Articulo = "";
 
-while (Opcion != 0)
+do
 {
     Console.WriteLine("=============================");
     Console.WriteLine("Tiendas_Accesorios_LABOLAROSA");
@@ -77,13 +77,12 @@ while (Opcion != 0)
             break;
 
     }
-}
+} while (Opcion != 0);
 static void AgregarArticulo(List<string> store, List<double> precios, string Articulo, double precio)
 {
     store.Add(Articulo);
     precios.Add(precio);
     Console.WriteLine("Articulo agregado correctamente");
-    Console.ReadKey();
 }
 
 static void BuscarArticulo(List<string> store, string Articulo)
